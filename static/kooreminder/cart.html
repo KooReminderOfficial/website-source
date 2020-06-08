@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce 4 StartUps</title>
+    <!--Font lato-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <!--Font Comfortaa-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Comfortaa">
+    <!--Materialize-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!--animations-->
+    <link rel="stylesheet" href="css/aos.css" />
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Custom CSS no Nav-->
+    <link rel="stylesheet" href="css/noScroll.css">
+    <!--Material icons-->
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scrollto.js"></script>
+</head>
+
+<body class="blue">
+    <!--navbar-->
+    <nav>
+        <div class="nav-wrapper blue spazio ">
+            <a href="index.html" class="brand-logo Comfortaa center-on-small-only"><img src="img/favicon.png"
+                    height="50" width="50" class="img_nav rotondo " align="center"></a>
+            <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class=" black-text mdi mdi-menu"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="docs.html" class="white-text Comfortaa black-text hoverable"><i class="right mdi mdi-information"></i>Device documentation</a></li>
+                <li><a href="contact.html" class="white-text Comfortaa black-text hoverable"><i
+                            class="right mdi mdi-comment-account "></i>Contact us</a></li>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="docs.html" class="Comfortaa black-text hoverable"><i class="right mdi mdi-information"></i>Device
+                documentation</a></li>
+        <li><a href="contact.html" class="Comfortaa black-text hoverable"><i
+                    class="right mdi mdi-comment-account "></i>Contact us</a></li>
+    </ul>
+
+    <!--main section-->
+    <form class="white" action="/checkout" method="post">
+        <div class="row">
+            <div class="col s10 m8 offset-s1 offset-m2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th class="center">Item Price</th>
+                            <th class="right">Item Quantity</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>KooReminder</td>
+                            <td class="center" id='KooReminder_prezzo'>€400.00</td>
+                            <input name='kooreminder' id='KooReminder_comprati_input' name='kooreminder' type='hidden'
+                                value='0' />
+                            <td class="right"><a onclick='decrement("KooReminder");'
+                                    class="pdRight waves-effect waves-light btn red"><i
+                                        class="mdi mdi-minus"></i></a><span id='KooReminder_comprati'> 0 </span><a
+                                    onclick='increment("KooReminder");'
+                                    class="pdLeft waves-effect waves-light btn red"><i class="mdi mdi-plus"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cable</td>
+                            <td class="center" id="Cavi_prezzo">€10.00</td>
+                            <input name='cavi' id='Cavi_comprati_input' name='cavi' type='hidden' value='0' />
+                            <td class="right"><a onclick='decrement("Cavi");'
+                                    class="pdRight waves-effect waves-light btn red"><i
+                                        class="mdi mdi-minus"></i></a><span name='Cavi' id='Cavi_comprati'> 0 </span><a
+                                    onclick='increment("Cavi");' class="pdLeft waves-effect waves-light btn red"><i
+                                        class="mdi mdi-plus"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>FBOS</td>
+                            <td class="center" id='OS_prezzo'>€7.00</td>
+                            <input name='os' id='OS_comprati_input' type='hidden' value='0' />
+                            <td class="right"><a onclick='decrement("OS");'
+                                    class="pdRight waves-effect waves-light btn red"><i
+                                        class="mdi mdi-minus"></i></a><span name='OS' id='OS_comprati'> 0 </span><a
+                                    onclick='increment("OS");' class="pdLeft waves-effect waves-light btn red"><i
+                                        class="mdi mdi-plus"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pTop row">
+                <div class="col s10 m8 offset-s1 offset-m2">
+                    <button type="submit" class="right center red waves-effect waves-light btn" id='paypal-button'>
+                        <i class="mdi mdi-cart right" id='checkout_amount' onclick='checkout_warning();'> Checkout with PayPal </i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!--Floating action button-->
+    <div id="back-to-top" class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="mdi mdi-chevron-up"></i>
+        </a>
+    </div>
+
+    <footer class="page-footer footer blue">
+        <div class="row">
+            <div class="col l6 s12 center">
+                <h5 class="black-text">I.I.S. Einstein - De Lorenzo</h5>
+                <p class="black-text">Made <b>from scratch</b> by 4L </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="black-text">Links</h5>
+                <ul>
+                    <li><a class="black-text" data-position="top" data-tooltip="our is better"
+                            target=”_blank” href="https://www.itigeopz.edu.it"><i class="mdi mdi-application"></i>
+                            School website</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-copyright black-text blue">
+            <div class="container blue">
+                <i class="mdi mdi-copyright"></i> <span id="year">yyyy</span> - KooReminder -
+            </div>
+        </div>
+    </footer>
+    <!--Javascript things-->
+    <script src="js/lazyload.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>AOS.init({ disable: 'mobile' });</script>
+    <script src="js/date.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/btt.js"></script>
+
+    <script>
+        function checkout_warning() {
+            alert(`WARNING! WARNING! WARNING!\nYou must pass as a PAYPAL COMMENT with your contact information and where to deliver the package. If you don't specify where to deliver the package or if there is an error, we can contact you if you pass your email address.`)
+        }
+
+        function update_price() {
+            let ids_prefix = ['KooReminder', 'Cavi', 'OS'];
+            let to_pay = 0;
+
+            for (let _ in ids_prefix) {
+                let i = ids_prefix[_];
+                console.log(`i: ${i}`);
+                console.log(`innerHTML[1:] -> ${document.getElementById(i + "_prezzo").innerHTML.substring(1)}`)
+
+                let foo = Number(document.getElementById(i + "_prezzo").innerHTML.substring(1));
+
+                to_pay += foo * Number(document.getElementById(i + "_comprati").innerHTML);
+            }
+
+            document.getElementById('checkout_amount').innerHTML = `Checkout with PayPal (€${to_pay})`;
+        }
+
+        function increment(id) {
+            console.log("(increment) Id: " + id);
+            var x = document.getElementById(id + "_comprati").innerHTML;
+            var y = Number(x) + 1;
+
+            console.log("x: " + x);
+            console.log("y: " + y);
+
+            if (isNaN(y)) {
+                y = 1;
+            }
+
+            document.getElementById(id + "_comprati").innerHTML = "  " + y + "  ";
+            document.getElementById(id + "_comprati_input").value = y.toString();
+            document.getElementById(id + "_comprati").disable = false;
+
+            update_price();
+        }
+
+        function decrement(id) {
+            var x = document.getElementById(id + "_comprati").innerHTML;
+            var y = Number(x) - 1;
+
+            if (y < 0 || isNaN(y)) {
+                document.getElementById(id + "_comprati").disable = true;
+            } else {
+                document.getElementById(id + "_comprati").innerHTML = "  " + y + "  ";
+                document.getElementById(id + "_comprati_input").value = y.toString();
+            }
+
+            update_price();
+        }
+    </script>
+
+    <script src="https://js.braintreegateway.com/web/dropin/1.22.0/js/dropin.min.js"></script>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+</body>
+
+</html>

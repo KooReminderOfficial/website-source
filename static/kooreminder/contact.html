@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce 4 StartUps</title>
+    <!--Font lato-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <!--Font Comfortaa-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Comfortaa">
+    <!--Materialize-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!--animations-->
+    <link rel="stylesheet" href="css/aos.css" />
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Custom CSS no Nav-->
+    <link rel="stylesheet" href="css/noScroll.css">
+    <!--Material icons-->
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css">
+     <script src="js/jquery.min.js"></script>
+     <script src="js/scrollto.js"></script>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav >
+      <div class="nav-wrapper blue spazio ">
+        <a href="index.html" class="brand-logo Comfortaa center-on-small-only "><img src="img/favicon.png"  height="50" width="50" class="img_nav rotondo " align="center"  ></a>
+        <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class=" black-text mdi mdi-menu"></i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="cart.html" class="Comfortaa white-text hoverable"><i class="right mdi mdi-cart"></i>Cart</a></li>
+            <li><a onclick="scroll_to('contactDivForm')" class="Comfortaa white-text hoverable"><i class="right mdi mdi-comment-account " ></i>Contact us</a></li>
+        </div>
+     </nav>
+     
+     <ul class="sidenav" id="mobile-demo">
+       <li><a href="cart.html" class="Comfortaa black-text hoverable"><i class="right mdi mdi-cart"></i>Cart</a></li>
+         <li><a onclick="scroll_to('contactDivForm')" class="Comfortaa black-text hoverable"><i class="right mdi mdi-comment-account " ></i>Contact us</a></li>
+     </ul>
+
+     
+
+<!--Floating action button-->
+<div id="back-to-top" class="fixed-action-btn">
+  <a class="btn-floating btn-large red">
+    <i class="mdi mdi-chevron-up"></i>
+  </a>
+</div>
+
+<div id="contactDivForm" class="container">
+  <h2 class="center">Contact us!</h2>
+  <div class="row center">
+    <div class="col s4 tooltipped" data-position="top" data-tooltip="DM us on Instagram"><a href="https://instagram.com/kooreminder" target="_blank" rel="noopener noreferrer"><i class="mdi mdi-instagram large purple-text"></i></a></div>
+    <div class="col s4 tooltipped" data-position="top" data-tooltip="DM us on Facebook"><a href="https://www.facebook.com/Kooreminder/" target="_blank" rel="noopener noreferrer"><i class="mdi mdi-facebook large blue-text darken-1"></i></a></div>
+    <div class="col s4 tooltipped" data-position="top" data-tooltip="Send us a mail"><a href="mailto:eramus.einstein@gmail.com" target="_blank" rel="noopener noreferrer"><i class="mdi mdi-email large red-text"></i></a></div>
+  </div>
+  <form id="contactForm" class="rounded hoverable black-text white" action="https://formspree.io/mlejbjpa"
+      method="POST">
+      <div class="row">
+          <div class="input-field col s12 m5 offset-m1">
+              <i class="mdi mdi-account-circle prefix"></i>
+              <input id="name" type="text" name="name" required="required" class="validate">
+              <label for="name">Name</label>
+          </div>
+          <div class="input-field col s12 m5">
+              <i class="mdi mdi-contact-mail prefix"></i>
+              <input id="mail" type="email" name="_replyto" required="required" class="validate">
+              <label for="mail">E-Mail</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12 m10 offset-m1">
+              <i class="mdi mdi-folder-text prefix"></i>
+              <textarea id="oggetto" name="Subject" data-length="64" required=""
+                  class="materialize-textarea"></textarea>
+              <label for="oggetto">Object</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12 m10 offset-m1">
+              <i class="mdi mdi-text-subject prefix"></i>
+              <textarea id="messaggio" name="message" required="" class="materialize-textarea"></textarea>
+              <label for="messaggio">Message</label>
+          </div>
+      </div>
+      <div class="center row pBottom">
+          <input class="btn red black-text" type="submit" value="Send">
+      </div>
+  </form>
+
+</div>
+
+ <footer class="page-footer blue">
+           <div class="row">
+             <div class="col l6 s12">
+               <h5 class="black-text">I.I.S. Einstein - De Lorenzo</h5>
+               <p class="black-text">Made <b>from scratch</b> by 4L </p>
+             </div>
+             <div class="col l4 offset-l2 s12">
+               <h5 class="black-text">Links</h5>
+               <ul>
+                 <li><a class="black-text" data-position="top" data-tooltip="our is better" target=”_blank” href="https://www.itigeopz.edu.it"><i class="mdi mdi-application"></i> School website</a></li>
+                 <li><a class="black-text" data-position="top" data-tooltip="our is better" target=”_blank” href="https://sites.google.com/view/kooreminder"><i class="mdi mdi-application"></i> Product website</a></li>
+               </ul>
+             </div>
+           </div>
+         </div>
+         <div class="footer-copyright black-text blue">
+           <div class="container blue">
+           <i class="mdi mdi-copyright"></i> <span id="year">yyyy</span> - KooReminder - 2018-ES01-KA229-050819
+           </div>
+         </div>
+       </footer>
+	 <!--Javascript things-->
+ 	<script src="js/lazyload.js"></script>
+ 	<script src="js/materialize.min.js"></script>
+ 	<script src="js/masonry.pkgd.min.js"></script>
+ 	<script src="js/aos.js"></script>
+ 	<script>AOS.init();</script>
+ 	<script src="js/date.js"></script>
+ 	<script src="js/main.js"></script>
+ 	<script src="js/btt.js"></script>
+  </body>
+</html>

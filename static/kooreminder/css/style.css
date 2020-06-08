@@ -1,0 +1,144 @@
+
+.nav-wrapper{
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.pTop{
+  padding-top: 1%;
+}
+
+.pBottom{
+  padding-bottom: 2%;
+}
+.noMargin{
+  margin: 0;
+}
+
+.blueColor{
+  background-color: #0099ff;
+}
+
+.centerText{
+  text-align: center;
+}
+
+#Tpath{
+  position: relative;
+  top: 1vh;
+}
+
+h1{
+    font-size: 2.8rem !important;
+  }
+
+  h3{
+    font-size: 1.8rem !important;
+  }
+
+  @media screen and (min-width: 321px){
+    h1{
+      font-size: 3rem !important;
+    }
+    h3{
+      font-size: 2rem !important;
+    }
+}
+
+@media screen and (min-width: 500px){
+  h1{
+    font-size: 5rem !important;
+  }
+  h3{
+    font-size: 3rem !important;
+  }
+}
+
+/* label color */
+ .input-field label {
+   color: #000 !important;
+ }
+
+ /* label focus color */
+ .input-field input[type=text]:focus + label {
+   color: #000 !important;
+ }
+ /* label underline focus color */
+ .input-field input[type=text]:focus {
+   border-bottom: 1px solid #000 !important;
+   box-shadow: 0 1px 0 0 #000 !important;
+ }
+
+ /* icon prefix focus color */
+ .input-field .prefix.active {
+   color: #000 !important;
+ }
+
+ /* label focus color */
+ .input-field input[type=email]:focus + label {
+   color: #000 !important;
+ }
+
+ /* label underline focus color */
+ .input-field input[type=email]:focus {
+   border-bottom: 1px solid #000 !important;
+   box-shadow: 0 1px 0 0 #000 !important;
+ }
+
+ /* label underline focus color */
+ .materialize-textarea:focus {
+   border-bottom: 1px solid #000 !important;
+   box-shadow: 0 1px 0 0 #000 !important;
+ }
+
+.rounded{
+  border-radius: 40px;
+}
+.rotondo{
+  border-radius: 50%;
+}
+
+.buttonP{
+  padding: 5%;
+}
+
+.cart-row{
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.right-text{
+  text-align: right !important;
+}
+
+/* .pdLeft {
+    left: 10px;
+}
+
+.pdRight {
+    right: 10px;
+} */
+
+#KooReminder_comprati {
+    width: 100%;
+}
+
+nav{
+  position: fixed;
+  z-index: 100;
+}
+
+.cento {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+footer {
+  min-width: 100%;
+  bottom: 0px;
+  left: 0px;
+}
+
+.fixTop{
+  padding-top: 30px;
+}
