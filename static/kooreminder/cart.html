@@ -32,8 +32,8 @@
             <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class=" black-text mdi mdi-menu"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="docs.html" class="white-text Comfortaa black-text hoverable"><i class="right mdi mdi-information"></i>Device documentation</a></li>
-                <li><a href="contact.html" class="white-text Comfortaa black-text hoverable"><i
-                            class="right mdi mdi-comment-account "></i>Contact us</a></li>
+                <li><a href="contact.html" class="white-text Comfortaa black-text hoverable"><i class="right mdi mdi-comment-account "></i>Contact us</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -45,7 +45,7 @@
     </ul>
 
     <!--main section-->
-    <form class="white" action="/checkout" method="post">
+    <form class="white" action="" method="post">
         <div class="row">
             <div class="col s10 m8 offset-s1 offset-m2">
                 <table>
@@ -60,7 +60,7 @@
                     <tbody>
                         <tr>
                             <td>KooReminder</td>
-                            <td class="center" id='KooReminder_prezzo'>€400.00</td>
+                            <td class="center" id='KooReminder_prezzo'>€200.00</td>
                             <input name='kooreminder' id='KooReminder_comprati_input' name='kooreminder' type='hidden'
                                 value='0' />
                             <td class="right"><a onclick='decrement("KooReminder");'
@@ -81,7 +81,7 @@
                                         class="mdi mdi-plus"></i></a></td>
                         </tr>
                         <tr>
-                            <td>FBOS</td>
+                            <td>FBOS Pro</td>
                             <td class="center" id='OS_prezzo'>€7.00</td>
                             <input name='os' id='OS_comprati_input' type='hidden' value='0' />
                             <td class="right"><a onclick='decrement("OS");'
@@ -96,7 +96,7 @@
             <div class="pTop row">
                 <div class="col s10 m8 offset-s1 offset-m2">
                     <button type="submit" class="right center red waves-effect waves-light btn" id='paypal-button'>
-                        <i class="mdi mdi-cart right" id='checkout_amount' onclick='checkout_warning();'> Checkout with PayPal </i>
+                        <i class="mdi mdi-cart right" id='checkout_amount' onclick='checkout_warning();'> Checkout</i>
                     </button>
                 </div>
             </div>
@@ -110,28 +110,32 @@
         </a>
     </div>
 
-    <footer class="page-footer footer blue">
-        <div class="row">
-            <div class="col l6 s12 center">
-                <h5 class="black-text">I.I.S. Einstein - De Lorenzo</h5>
-                <p class="black-text">Made <b>from scratch</b> by 4L </p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="black-text">Links</h5>
-                <ul>
-                    <li><a class="black-text" data-position="top" data-tooltip="our is better"
-                            target=”_blank” href="https://www.itigeopz.edu.it"><i class="mdi mdi-application"></i>
-                            School website</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-copyright black-text blue">
-            <div class="container blue">
-                <i class="mdi mdi-copyright"></i> <span id="year">yyyy</span> - KooReminder -
-            </div>
-        </div>
-    </footer>
+     <footer class="page-footer blue" id="footer_anchor">
+           <div class="row">
+             <div class="col l4 s12">
+               <h5 class="black-text">I.I.S. Einstein - De Lorenzo</h5>
+               <p class="black-text">Made <b>from scratch</b> by 4L </p>
+             </div>
+             <div class="col l4 s12">
+               <h5 class="black-text">EU Disclaimer</h5>
+               <p class="black-text">“This project has been funded with the Support from the European Commission. This website reflects the views only of the author and the Commission cannot be held responsible for any use which may be made of the information contained therein”</p>
+             </div>
+             <div class="col l4 s12">
+               <h5 class="black-text">Links</h5>
+               <ul>
+                 <li><a class="black-text" data-position="top" data-tooltip="our is better" target=”_blank” href="https://www.itigeopz.edu.it"><i class="mdi mdi-application"></i> School website</a></li>
+                 <li><a class="black-text" data-position="top" data-tooltip="our is better" target=”_blank” href="https://sites.google.com/view/kooreminder"><i class="mdi mdi-application"></i> Product website</a></li>
+                 <li><a class="black-text" data-position="top" data-tooltip="we ❤️ open source" target=”_blank” href="https://github.com/KooReminderOfficial"><i class="mdi mdi-application"></i> our GitHub organization</a></li>
+               </ul>
+             </div>
+           </div>
+         
+         <div class="footer-copyright black-text blue">
+           <div class="blue">
+           <i class="mdi mdi-copyright"></i> <span id="year">yyyy</span> - KooReminder - 2018-ES01-KA229-050819
+           </div>
+         </div>
+       </footer>
     <!--Javascript things-->
     <script src="js/lazyload.js"></script>
     <script src="js/materialize.min.js"></script>
@@ -144,7 +148,7 @@
 
     <script>
         function checkout_warning() {
-            alert(`WARNING! WARNING! WARNING!\nYou must pass as a PAYPAL COMMENT with your contact information and where to deliver the package. If you don't specify where to deliver the package or if there is an error, we can contact you if you pass your email address.`)
+            alert(`WARNING! WARNING! WARNING!\n\n This is a test website, our purpose was just to show the product. \n\n WE'RE NOT SELLING ANYTHING`)
         }
 
         function update_price() {
@@ -198,8 +202,8 @@
         }
     </script>
 
-    <script src="https://js.braintreegateway.com/web/dropin/1.22.0/js/dropin.min.js"></script>
-    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+    <!--script src="https://js.braintreegateway.com/web/dropin/1.22.0/js/dropin.min.js"></script>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script-->
 </body>
 
 </html>
